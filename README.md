@@ -1,0 +1,2 @@
+# search-countries
+This is a simple program that search for countries using API call from https://restcountries.com and show the capital's weather details through API call from https://openweathermap.org.
