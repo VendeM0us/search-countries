@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react'
+import styled from 'styled-components'
 import axios from 'axios'
 import Search from './components/Search'
 import Results from './components/Results'
+
+const StyledApp = styled.div`
+  font-family: 'Roboto', sans-serif;
+`;
 
 const App = () => {
   const [countries, setCountries] = useState([]);
@@ -42,10 +47,10 @@ const App = () => {
   if (isExactName) filteredCountries = [isExactName]
 
   return (
-    <div>
+    <StyledApp>
       <Search str={searchFilter} onChange={handleChange} />
       <Results data={filteredCountries} onButtonClick={viewCountry} />
-    </div>
+    </StyledApp>
   );
 }
 
